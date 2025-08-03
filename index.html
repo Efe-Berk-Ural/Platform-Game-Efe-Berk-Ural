@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Platform Oyunu Tam Sürüm</title>
+  <style>
+    body {
+      margin: 0;
+      background: #222;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background: #444;
+      image-rendering: pixelated;
+      flex: 1;
+    }
+    #controls {
+      position: fixed;
+      bottom: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      z-index: 10;
+      user-select: none;
+    }
+    #controls button {
+      font-size: 24px;
+      padding: 10px 15px;
+      background: #333;
+      color: white;
+      border: 2px solid #666;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px #111;
+      flex: 1;
+      margin: 0 5px;
+      touch-action: manipulation;
+    }
+    footer {
+      height: 30px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+      line-height: 30px;
+      user-select: none;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="800" height="450"></canvas>
+
+  <div id="controls">
+    <button id="left">◀️</button>
+    <button id="right">▶️</button>
+    <button id="up">⏫</button>
+    <button id="attack">🗡</button>
+    <button id="shield">🛡</button>
+  </div>
+
+  <footer>© Efe Berk Ural</footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
